@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: blueviolet;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>primeiros passo com dom</h1>
+    <p>aqui vai o resultado</p>
+    <p name ='msg'>aprendendo a usar <strong>Dom</strong> em JS</p>
+    <div id = 'msg'>clique em mim</div>
+    <script>
+        //window.document.write(window.document.charset)
+        //window.document.write(window.document.URL)
+        //window.document.write(window.navigator.appName)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('esta escrito assim:'+ p1.innerText)
+        p1.style.color = 'violet'
+        //corpo.style.background = 'purple'
+        //window.document.write(p1.innerHTML)
+        //window.alert(p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.color = 'red'
+        d.innerText = 'esperando'
+        //var p2 = window.document,getElementsByTagName('msg')[0]
+        //p2.innerText = 'foi de F'
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
